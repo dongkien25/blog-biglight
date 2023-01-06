@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+    class="bg-white rounded-sm shadow-[0_3px_12px_-1px_rgb(7,10,25,10%),0_2px_27px_-30px_rgb(7,10,25,10%)] dark:bg-gray-800 dark:border-gray-700 md:p-[45px_50px]"
   >
     <a href="#">
       <img class="rounded-t-lg" src="/img/news-1.png" alt="" />
