@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: local("Josefin Sans"),
+     url(~assets/Josefin_Sans/static/JosefinSans-Regular.ttf) format("truetype");
+}
+
+
+.sidebar .widget-title {
+    position: relative;
+    float: left;
+    width: 100%;
+    display: block;
+    margin: 0 0 20px;
+  }
+  .sidebar .widget-title:before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    border-bottom: 2px solid;
+    border-color: #ffa500;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    right: 100%;
+  }
+  .sidebar .widget-title > h3 {
+    position: relative;
+    float: left;
+    letter-spacing: 0.25px;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 700;
+    background: #fff;
+    color: #4B4870;
+    text-transform: capitalize;
+    padding: 0 10px 0 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .sidebar .widget-content {
+    float: left;
+    width: 100%;
+    margin: 0;
+  }
+  .social-brand {
+    border-radius: 8px;
+  }

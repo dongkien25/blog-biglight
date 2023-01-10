@@ -1,7 +1,8 @@
 <template>
-  <div>Sidebar</div>
+  <div>
+    <SideSocialPlugin></SideSocialPlugin>
+    <SidePopularPost class="mt-4"></SidePopularPost>
+  </div>
 </template>
 
 <script setup lang="ts"></script>
-
-<style scoped></style>

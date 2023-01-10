@@ -4,11 +4,11 @@
   >
     <div class="container flex flex-wrap items-center justify-between mx-auto">
       <a href="https://biglight.jp/" class="flex items-center">
-        <img
+        <!-- <img
           src="/img/biglight-logo-light.svg"
           class="w-[75px] h-[75px]"
           alt="Biglight logo"
-        />
+        /> -->
       </a>
       <button
         data-collapse-toggle="navbar-default"
