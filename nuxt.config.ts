@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       script: [
         {
           src: "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0&appId=622221636129936&autoLogAppEvents=1",
-          nonce: "y3Ssq4vT",
+          nonce: "VCN1dluA",
           async: true,
           defer: true,
           crossorigin: "anonymous",

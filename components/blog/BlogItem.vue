@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white rounded-sm shadow-[0_3px_12px_-1px_rgb(7,10,25,10%),0_2px_27px_-30px_rgb(7,10,25,10%)] dark:bg-gray-800 dark:border-gray-700 md:p-[45px_50px] p-[20px] relative"
+    class="bg-white flex flex-col rounded-sm shadow-[0_3px_12px_-1px_rgb(7,10,25,10%),0_2px_27px_-30px_rgb(7,10,25,10%)] dark:bg-gray-800 dark:border-gray-700 md:p-[45px_50px] p-[20px] relative blog-item"
   >
     <div class="flex">
       <a href="#">
@@ -39,14 +39,15 @@
         "
       ></p>
     </div>
-    <div class="flex justify-center post-tag-meta">
+    <div class="flex justify-center post-tag-meta mt-auto">
       <a href="" class="post-tag"> Idea </a>
     </div>
+    <!-- <a href="" class="read-more-btn"></a> -->
     <a
       href="#"
       class="absolute left-[50%] bottom-[-20px] translate-x-[-50%] inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white read-more"
     >
-      Read more
+      Đọc tiếp
       <svg
         aria-hidden="true"
         class="w-4 h-4 ml-2 -mr-1"
@@ -73,6 +74,9 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.blog-item {
+  height: 340px;
+}
 .read-more {
   background-color: #0d6efd;
   padding: 0 30px;
@@ -140,5 +144,23 @@ onMounted(() => {
   margin-right: 3px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+@media screen and (max-width: 480px) {
+  a.read-more {
+    display: flex;
+    justify-content: center;
+    position: static;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 15px 0 0;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: unset;
+    -ms-transform: unset;
+    transform: unset;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-[#f3f1ed4d]">
     <layout-the-header />
     <NuxtPage />
     <layout-the-footer />
