@@ -5,9 +5,18 @@
     <div class="widget-title">
       <h3 class="title">Popular Posts</h3>
     </div>
+    <div class="widget-content">
+      <SidePopularItem></SidePopularItem>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts"></script>
 
-<style scoped></style>
+<style scoped>
+.sidebar .widget-content {
+  float: left;
+  width: 100%;
+  margin: 0;
+}
+</style>
