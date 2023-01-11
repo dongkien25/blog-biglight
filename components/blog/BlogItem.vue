@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white rounded-sm shadow-[0_3px_12px_-1px_rgb(7,10,25,10%),0_2px_27px_-30px_rgb(7,10,25,10%)] dark:bg-gray-800 dark:border-gray-700 md:p-[45px_50px] relative"
+    class="bg-white rounded-sm shadow-[0_3px_12px_-1px_rgb(7,10,25,10%),0_2px_27px_-30px_rgb(7,10,25,10%)] dark:bg-gray-800 dark:border-gray-700 md:p-[45px_50px] p-[20px] relative"
   >
     <div class="flex">
       <a href="#">
@@ -21,20 +21,23 @@
             -webkit-box-orient: vertical;
           "
         >
-          Noteworthy technology acquisitions 2021 Noteworthy technology
-          acquisitions 2021Noteworthy technology acquisitions 2021Noteworthy
-          technology acquisitions 2021Noteworthy technology acquisitions
-          2021Noteworthy technology acquisitions 2021Noteworthy technology
-          acquisitions 2021
+          {{ post.vi_title }}
         </p>
       </div>
     </div>
 
     <div class="py-5">
-      <p class="mb-3 font-normal text-gray-700">
-        Here are the biggest enterprise technology acquisitions of 2021 so far,
-        in reverse chronological order.
-      </p>
+      <p
+        class="mb-3 font-normal text-gray-700"
+        v-html="post.vi_content"
+        style="
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        "
+      ></p>
     </div>
     <div class="flex justify-center post-tag-meta">
       <a href="" class="post-tag"> Idea </a>
@@ -61,7 +64,13 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps(["post"]);
+
+onMounted(() => {
+  console.log(props.post);
+});
+</script>
 
 <style scoped>
 .read-more {

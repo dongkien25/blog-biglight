@@ -1,7 +1,7 @@
 <template>
   <div>
     <SideSocialPlugin></SideSocialPlugin>
-    <SidePopularPost class="mt-4"></SidePopularPost>
+    <SidePopularPost v-bind="$attrs" class="mt-4"></SidePopularPost>
     <SideFacebookSide class="mt-4"></SideFacebookSide>
   </div>
 </template>

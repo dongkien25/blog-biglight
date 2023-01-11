@@ -1,7 +1,7 @@
 <template>
   <div class="post-content">
     <a href="" class="post-image-link">
-      <img src="/img/facebook.png" class="post-thumb max-w-[100%]" alt="" />
+      <img src="/img/news-1.png" class="post-thumb max-w-[100%]" alt="" />
     </a>
     <div class="post-info overflow-hidden">
       <h2 class="post-title">
@@ -11,15 +11,26 @@
         </a>
       </h2>
       <div class="post-meta">
-        <span class="post-date published" datetime="2022-08-27T19:30:00-07:00"
-          >August 27, 2022</span
+        <span
+          class="post-date published"
+          datetime="2022-08-27T19:30:00-07:00"
+          >{{ createDate }}</span
         >
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import * as moment from "moment";
+import "moment/locale/vi";
+
+const props = defineProps(["post"]);
+const createDate = computed(() => {
+  moment.locale("vi");
+  return props.post ? moment(props.post.created_at).format("LL") : "";
+});
+</script>
 
 <style scoped>
 .post-image-link {
